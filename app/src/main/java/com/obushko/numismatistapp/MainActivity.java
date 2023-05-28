@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private void getWeb() {
         try {
             Document doc = Jsoup.connect("https://privatbank.ua/premium-banking/coins").get();
-            // Elements sections = doc.getElementsByTag("section");
             Elements sections = doc.getElementsByClass("wr_inner block-wtf coins-container");
 
             if (sections.size() > 0) {
@@ -86,77 +85,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-//    private void getWeb() {
-//        try {
-//            Document doc = Jsoup.connect("https://privatbank.ua/premium-banking/coins").get();
-//            Elements sections = doc.getElementsByTag("section");
-//
-//            if (sections.size() > 0) {
-//                Element section = sections.first();
-//                Elements rows = section.children();
-//
-//                for (Element row : rows) {
-//                    Element imgElement = row.select("img").first();
-//                    if (imgElement != null) {
-//                        String src = imgElement.absUrl("data-src");
-//
-//                        String title = row.select(".table-description.bold-text").text();
-//                        String price = row.select(".table-description.coin-name").text();
-//
-//                        ListItem listItem = new ListItem();
-//                        listItem.setUrlImage(src);
-//                        listItem.setTitle(title);
-//                        listItem.setPrice(price);
-//                        listItems.add(listItem);
-//                    }
-//                }
-//
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        listAdapter = new ListAdapter(MainActivity.this, listItems);
-//                        recyclerView.setAdapter(listAdapter);
-//                    }
-//                });
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
-
-
-//    private void getWeb() {
-//        try{
-//            doc = Jsoup.connect("https://privatbank.ua/premium-banking/coins").get();
-//           // Elements tables = doc.getElementsByClass("wr_inner block-wtf coins-container");
-//            Elements section = doc.getElementsByTag("section");
-//            Element element = section.get(0);
-//            Log.d("MyLog", "tables:" + element);
-//
-//            Elements rows = element.children();
-//            for(Element row : rows){
-//                Element imgElement = row.select("img").first();
-//                String src = imgElement.absUrl("data-src");
-//
-//                ListItem listItem = new ListItem();
-//                listItem.setUrlImage(src);
-//                listItem.setTitle(row.children().text());
-//                listItem.setPrice(row.children().text());
-//                listItems.add(listItem);
-//            }
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    listAdapter = new ListAdapter(MainActivity.this, listItems);
-//                    recyclerView.setAdapter(listAdapter);
-//                }
-//            });
-//
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//    }
 }
