@@ -18,8 +18,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private Document doc;
-    private Thread secondThread;
-    private Runnable runnable;
     private ArrayList<ListItem> listItems;
     private RecyclerView recyclerView;
     private ListAdapter listAdapter;
@@ -37,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         listItems = new ArrayList<>();
 
-        runnable = new Runnable() {
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 getWeb();
             }
         };
-        secondThread = new Thread(runnable);
+        Thread secondThread = new Thread(runnable);
         secondThread.start();
     }
 
