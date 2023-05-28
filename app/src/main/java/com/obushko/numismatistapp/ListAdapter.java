@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
@@ -36,6 +38,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         String urlImage = currentItem.getUrlImage();
         String title = currentItem.getTitle();
         String price = currentItem.getPrice();
+
+        Picasso.get().load(urlImage).into(holder.imageView);
+        holder.textViewTitle.setText(title);
+        holder.textViewPrice.setText(price);
 
     }
 

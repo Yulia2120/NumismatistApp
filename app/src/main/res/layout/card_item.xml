@@ -1,48 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="4dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="8dp">
+
 
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@color/purple_200">
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            >
         </ImageView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
             android:text="Title"/>
 
         <TextView
             android:id="@+id/textViewPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
             android:text="Price"/>
 
         <Button
             android:id="@+id/buttonText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:text="Детальніше"
             android:textAllCaps="false"
             app:cornerRadius="16dp" />
+    </LinearLayout>
 
     </LinearLayout>
+
 
 
 </androidx.cardview.widget.CardView>
