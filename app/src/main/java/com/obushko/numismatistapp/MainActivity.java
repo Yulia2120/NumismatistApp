@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
     private ArrayList<ListItem> listItems;
     private RecyclerView recyclerView;
     private ListAdapter listAdapter;
-    private ImageView imageView;
+
 
 
     @Override
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         listItems = new ArrayList<>();
-        imageView = findViewById(R.id.imageView);
+
 
 
         Runnable runnable = new Runnable() {
@@ -106,72 +106,8 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
     }
 
 
-//    private void changeImage() {
-//        // Проверяем, есть ли элементы в списке
-//        if (!listItems.isEmpty()) {
-//            // Получаем первый элемент из списка
-//            ListItem listItem = listItems.get(1);
-//
-//            // Изменяем изображение элемента на обратную сторону монеты
-//            // вместо использования метода getWeb(), можно просто изменить url изображения
-//            listItem.setUrlImage("https://d2z9uwnt8eubh7.cloudfront.net/media/coins/0001/22/thumb_21874_coins_230.png");
-//
-//            // Обновляем адаптер после изменения изображения
-//            listAdapter.notifyDataSetChanged();
-//        }
-//    }
 
 
-    //получаем первую монету
-//    private void changeParsImage() {
-//        try {
-//            Document doc = Jsoup.connect("https://privatbank.ua/premium-banking/coins").get();
-//            Element imagesDiv = doc.selectFirst(".images-coins"); // Select the div with class "images-coins"
-//
-//            if (imagesDiv != null) {
-//                Elements imgElements = imagesDiv.select("img[data-lazyload='on']"); // Select all img elements with data-lazyload="on"
-//
-//                if (imgElements.size() >= 2) {
-//                    Element secondImgElement = imgElements.get(1); // Get the second img element (index 1)
-//                    String src = secondImgElement.attr("data-src"); // Get the value of the data-src attribute
-//
-//                    ListItem listItem = new ListItem();
-//                    listItem.setUrlImage(src);
-//                    listItems.add(listItem);
-//                    System.out.println(src); // Output the URL of the second img element
-//                   // currentUri = Uri.parse(src);
-//
-//                }
-//            }
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    listAdapter = new ListAdapter(MainActivity.this, listItems);
-//                    recyclerView.setAdapter(listAdapter);
-//                }
-//            });
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
-//    public void changeImage(View view) {
-//        ImageView imageView = findViewById(R.id.imageView);
-//        Runnable runnable = new Runnable(){
-//
-//            @Override
-//            public void run() {
-//                changeParsImage();
-//                imageView.setImageURI(currentUri);
-//            }
-//        };
-//        Thread secondThread = new Thread(runnable);
-//        secondThread.start();
-//    }
-//
-//    }
 
 
 //получаем все монеты(с изнанки)
