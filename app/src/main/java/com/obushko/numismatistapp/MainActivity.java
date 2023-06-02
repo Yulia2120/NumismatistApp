@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ListAdapter.Listener {
 
-    private Document doc;
     private ArrayList<ListItem> listItems;
     private RecyclerView recyclerView;
     private ListAdapter listAdapter;
@@ -45,9 +44,6 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         listItems = new ArrayList<>();
-
-
-
 
 
         Runnable runnable = new Runnable() {
@@ -112,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
 
 
 //получаем все монеты(с изнанки)
-
 //    private void changeImage() {
 //        try {
 //            Document doc = Jsoup.connect("https://privatbank.ua/premium-banking/coins").get();

@@ -105,4 +105,5 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         void onClickListItem(ListItem listItem, int pos);
 
     }
+
 }
