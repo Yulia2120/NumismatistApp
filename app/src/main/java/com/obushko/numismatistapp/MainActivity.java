@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         listItems = new ArrayList<>();
+
+
 
 
 
@@ -104,9 +108,6 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Liste
     public void onClickListItem(ListItem listItem, int pos) {
 
     }
-
-
-
 
 
 

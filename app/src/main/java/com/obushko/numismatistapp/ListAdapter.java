@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false);
+
         return new ListViewHolder(view);
     }
 
@@ -68,11 +70,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         TextView textViewTitle;
         TextView textViewPrice;
 
+
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -99,5 +103,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
     interface Listener{
         void onClickListItem(ListItem listItem, int pos);
+
     }
 }
