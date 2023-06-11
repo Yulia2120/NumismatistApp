@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -30,6 +31,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
     private Context context;
     private final ArrayList<ListItem> lists;
+
+
 
     public ListAdapter(Context context, ArrayList<ListItem> lists) {
         this.context = context;
@@ -51,6 +54,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         String urlImage = currentItem.getUrlImage();
         String title = currentItem.getTitle();
         String price = currentItem.getPrice();
+        boolean currentTheme = currentItem.getCurrentTheme();
 
         Picasso.get().load(urlImage).into(holder.imageView);
         holder.textViewTitle.setText(title);

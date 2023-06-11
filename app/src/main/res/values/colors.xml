@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="back">#222222</color>
     <color name="back_card">#323232</color>
+
+    <color name="textColor">#000000</color>
 </resources>

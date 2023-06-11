@@ -2,9 +2,10 @@ package com.obushko.numismatistapp;
 
 public class ListItem {
 
-    String urlImage;
-    String title;
-    String price;
+   private String urlImage;
+    private String title;
+    private String price;
+    private boolean currentTheme;
 
     public String getUrlImage() {
         return urlImage;
@@ -29,4 +30,9 @@ public class ListItem {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public boolean getCurrentTheme() {
+       return currentTheme;
+    }
+
 }
